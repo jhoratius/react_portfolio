@@ -7,7 +7,7 @@ const Body = () => {
         <main className="Body">
             <Header/>
             <h1>Bienvenue sur mon portfolio</h1>
-            <Footer />
+            <Footer/>
         </main>
     )
 }

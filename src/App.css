@@ -20,14 +20,20 @@
 
 /* - MAIN DIV - */
 .Body {
-  background-color: #cecece;
-  min-height: 100vh;
+  background: center / contain no-repeat url("https://newbble.com/wp-content/uploads/2019/12/footer-background-image.png");
+  background-size: cover;
   display: flex;
+  min-height:100vh;
+  height:100%;
   flex-direction: column;
   align-items: center;
   justify-content:space-between;
   font-size: calc(10px + 2vmin);
 }
+
+/* @media screen and (max-width : 550px) {
+  
+} */
 
 body{
   margin: 0;
@@ -38,7 +44,7 @@ header {
   /* appearance */
   width:100%;
   background-color: rgb(25, 62, 143);
-  border-bottom: 0.3vmin solid rgb(179, 179, 179) ;
+  border-bottom: 0.3vmin solid rgb(179, 179, 179);
 
   /* positioning */
   display: flex;
@@ -147,7 +153,7 @@ footer button{
 
 main{
   width:100%;
-  color:rgb(25, 62, 143);  
+  color:rgb(13, 36, 85);  
 }
 
 .title{
@@ -158,9 +164,13 @@ main{
   text-align: center;
 }
 
+.course_title{
+  padding-left: 2vh;
+}
+
 .exp{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
 }
 
@@ -184,4 +194,53 @@ table, td, th{
 th, td{
   padding: 10px;
   text-align: center;
+}
+
+/* popover */
+
+.text-hover-div {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.text-hover-div .text-hover, .text-hover-div #text-hover2 {
+  visibility:hidden;
+  width: 300px;
+  background-color: rgb(25, 62, 143);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 2vh;
+
+  /* Position the tooltip */
+  position: absolute;
+  bottom:9vh;
+  left:-9vh;
+  z-index: 1;
+}
+
+.text-hover-div:hover .text-hover, .text-hover-div:hover #text-hover2{
+  visibility: visible;
+}
+
+#linkedin-btn, #email-btn{
+  /* dimensions*/
+  max-width:20vh;
+  padding: 5% 10% 5% 10%;
+  height:4vh;
+  margin: 2vh 0 2vh 0;
+  
+  /* appearance*/
+  background-color: white;
+  border: none;
+  /* border-radius: 15px; */
+  cursor: pointer;
+
+  /* font */
+  color:rgb(13, 36, 85);
+  font-family: 'Georama', sans-serif;
+  font-size: calc(7px + 2vmin);
+  font-weight: bold;
 }
